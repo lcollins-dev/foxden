@@ -1,0 +1,62 @@
+{{#if subject}}
+{{{inviterName}}} invited you to Foxden
+{{/if}}
+{{#if text}}
+You're invited to sync Firefox with Foxden
+
+{{{inviterName}}} invited you to create an account on {{{serverHost}}}, the Foxden server they run.
+
+Foxden keeps your bookmarks, history, passwords and open tabs in sync across your devices, stored on their server instead of Mozilla's.
+{{#if admin}}
+
+You'll join as an admin, so you'll also be able to invite people and manage accounts.
+{{/if}}
+
+Accept the invite by opening this link in Firefox:
+
+{{{link}}}
+
+The link works once and expires on {{dateTime expiresAt}}. After you choose a password, we'll show you how to connect Firefox.
+
+If you weren't expecting this invite, you can ignore this email. No account is created until you accept.
+{{/if}}
+{{#if html}}
+{{#> layout}}
+  {{#*inline "footer"}}
+    If you weren't expecting this invite, you can ignore this email. No account is created until you accept.
+  {{/inline}}
+
+  <h1>You're invited to sync Firefox with Foxden</h1>
+
+  <p>
+    {{inviterName}} invited you to create an account on <span class="strong">{{serverHost}}</span>, the Foxden server
+    they run.
+  </p>
+
+  <p>
+    Foxden keeps your bookmarks, history, passwords and open tabs in sync across your devices, stored on their server
+    instead of Mozilla's.
+  </p>
+
+  {{#if admin}}
+  <p>You'll join as an admin, so you'll also be able to invite people and manage accounts.</p>
+  {{/if}}
+
+  <table role="presentation" class="button" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td><a href="{{link}}">Accept Invite</a></td>
+    </tr>
+  </table>
+
+  <p class="note" style="margin: 24px 0 6px">Or paste this link into Firefox:</p>
+
+  <div class="inset"><a href="{{link}}">{{link}}</a></div>
+
+  <div class="divider">&nbsp;</div>
+
+  <p class="note" style="margin: 0">
+    The link works once and expires on {{dateTime expiresAt}}. After you choose a password, we'll show you how to connect
+    Firefox.
+  </p>
+{{/layout}}
+{{/if}}

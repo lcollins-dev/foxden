@@ -1,0 +1,35 @@
+{
+  "name": "firefox-e2e",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Louis Collins",
+  "license": "AGPL-3.0-only",
+  "description": "Drives a pinned or locally installed Firefox against a self-hosted accounts and Sync server",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/fetch-geckodriver.ts",
+    "fetch-geckodriver": "node scripts/fetch-geckodriver.ts",
+    "probe": "node src/probe.ts",
+    "stub": "node src/stub-server.ts",
+    "code:lint": "eslint .",
+    "code:lint:fix": "eslint . --fix",
+    "code:format": "prettier --write .",
+    "code:format:check": "prettier --check .",
+    "code:typecheck": "tsc --noEmit",
+    "test": "node --test --test-concurrency=1 'src/tests/*.test.ts'",
+    "fetch-firefox": "node scripts/fetch-firefox.ts",
+    "fetch-android": "node scripts/fetch-android.ts",
+    "test:android": "node --test --test-concurrency=1 'src/android-tests/*.test.ts'"
+  },
+  "dependencies": {
+    "selenium-webdriver": "4.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.17.2",
+    "@types/selenium-webdriver": "4.35.7",
+    "typescript": "5.9.3"
+  }
+}

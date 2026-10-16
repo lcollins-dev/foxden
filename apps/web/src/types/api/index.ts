@@ -1,0 +1,17 @@
+export enum RequestStatus {
+  SUCCESS = 200,
+  CREATED = 201,
+  ACCEPTED = 202,
+  UNAUTHORIZED = 401,
+  FORBIDDEN = 403,
+  NOT_FOUND = 404,
+  TOO_MANY_REQUESTS = 429,
+}
+
+export enum RequestType {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  PATCH = 'PATCH',
+  DELETE = 'DELETE',
+}

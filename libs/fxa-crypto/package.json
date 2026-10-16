@@ -1,0 +1,28 @@
+{
+  "name": "@libs/fxa-crypto",
+  "private": true,
+  "author": "Louis Collins",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "tsc --build --clean tsconfig.json tsconfig.node.json && tsc --build tsconfig.json tsconfig.node.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "code:lint": "eslint .",
+    "code:lint:fix": "eslint . --fix",
+    "code:format": "prettier --write .",
+    "code:format:check": "prettier --check .",
+    "npm:clean": "rm -rf node_modules",
+    "code:typecheck": "tsc --noEmit -p tsconfig.test.json"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "node": "./dist/node/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "jose": "6.2.12"
+  }
+}

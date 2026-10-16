@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stub accounts server</title>
+  </head>
+  <body>
+    <h1>Stub accounts server</h1>
+    <p>
+      This page stands in for the sign-in UI. It asks Firefox for <code>fxaccounts:fxa_status</code> over WebChannel and
+      posts the reply to <code>/__probe/webchannel</code>.
+    </p>
+    <pre id="status">Waiting for Firefox...</pre>
+
+    <script>
+      const CHANNEL_ID = 'account_updates';
+      const params = new URLSearchParams(location.search);
+
+      window.addEventListener('WebChannelMessageToContent', event => {
+        if (event.detail.id !== CHANNEL_ID) {
+          return;
+        }
+
+        const reply = structuredClone(event.detail.message);
+        if (reply.data && reply.data.signedInUser && reply.data.signedInUser.sessionToken) {
+          reply.data.signedInUser.sessionToken = '(redacted)';
+        }
+
+        document.getElementById('status').textContent = JSON.stringify(reply, null, 2);
+        fetch('/__probe/webchannel', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ page: location.pathname + location.search, reply }),
+        });
+      });
+
+      window.dispatchEvent(
+        new CustomEvent('WebChannelMessageToChrome', {
+          detail: JSON.stringify({
+            id: CHANNEL_ID,
+            message: {
+              command: 'fxaccounts:fxa_status',
+              messageId: 'probe-1',
+              data: { service: params.get('service') ?? 'sync', context: params.get('context') ?? '' },
+            },
+          }),
+        })
+      );
+    </script>
+  </body>
+</html>

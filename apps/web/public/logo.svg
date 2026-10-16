@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="27" fill="#3a2d6b" />
+  <path d="M8 112.18 V68 A52 52 0 0 1 112 68 V112.18 A27 27 0 0 1 93 120 H27 A27 27 0 0 1 8 112.18 Z" fill="#1a1433" />
+  <g transform="translate(8 16) scale(1.1304)">
+    <path d="M21 60 C14 48 12 32 17 23 C26 27 37 38 43 50 Z" fill="#d9682e" />
+    <path d="M71 60 C78 48 80 32 75 23 C66 27 55 38 49 50 Z" fill="#d9682e" />
+    <path d="M25 57 C21 47 20 38 22 32 C28 36 34 43 37 52 Z" fill="#fbf4e8" />
+    <path d="M67 57 C71 47 72 38 70 32 C64 36 58 43 55 52 Z" fill="#fbf4e8" />
+    <path d="M8 90.33 V76 C8 58 25 46 46 46 C67 46 84 58 84 76 V90.33 A23.89 23.89 0 0 1 75.19 92 H16.81 A23.89 23.89 0 0 1 8 90.33 Z" fill="#d9682e" />
+    <path d="M46 78 C56 78 64 83 66 92 H26 C28 83 36 78 46 78 Z" fill="#fbf4e8" />
+    <circle cx="32" cy="67" r="4.2" fill="#1a1433" />
+    <circle cx="60" cy="67" r="4.2" fill="#1a1433" />
+    <circle cx="33.6" cy="65.4" r="1.4" fill="#fbf4e8" />
+    <circle cx="61.6" cy="65.4" r="1.4" fill="#fbf4e8" />
+    <path d="M41 85 Q46 83 51 85 Q48 91 46 92 Q44 91 41 85 Z" fill="#1a1433" />
+  </g>
+</svg>

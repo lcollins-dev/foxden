@@ -1,0 +1,6 @@
+**/dist
+**/node_modules
+.git
+.workdir
+apps/api/data
+apps/api/development.env

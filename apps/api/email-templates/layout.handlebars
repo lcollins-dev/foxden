@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <title>{{title}}</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9fb;
+      }
+
+      .page {
+        background-color: #f9f9fb;
+      }
+
+      .page-cell {
+        padding: 40px 16px;
+      }
+
+      .column {
+        max-width: 520px;
+        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.45;
+        color: #57565a;
+      }
+
+      .brand {
+        padding: 0 4px 24px;
+      }
+
+      .brand-logo {
+        padding-right: 10px;
+        vertical-align: middle;
+      }
+
+      .brand-logo img {
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 0;
+      }
+
+      .brand-name {
+        vertical-align: middle;
+        font-size: 20px;
+        font-weight: 600;
+        color: #15141a;
+      }
+
+      .card {
+        padding: 24px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        border-radius: 12px;
+      }
+
+      .footer {
+        padding: 16px 4px 0;
+        font-size: 12px;
+        color: #7e7e82;
+      }
+
+      h1 {
+        margin: 0 0 20px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: -0.025em;
+        color: #15141a;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      .strong {
+        font-weight: 500;
+        color: #15141a;
+      }
+
+      .note {
+        font-size: 13px;
+        color: #818083;
+      }
+
+      .button {
+        margin-top: 24px;
+      }
+
+      .button td {
+        background-color: #7542e5;
+        border-radius: 8px;
+      }
+
+      .button a {
+        display: inline-block;
+        padding: 9px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+
+      .inset {
+        padding: 10px 12px;
+        font-family: 'Ubuntu Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        line-height: 1.4;
+        word-break: break-all;
+        background-color: #f6f6f6;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+      }
+
+      .inset a {
+        color: #2c2c31;
+        text-decoration: none;
+      }
+
+      .divider {
+        height: 1px;
+        margin: 24px 0;
+        font-size: 1px;
+        line-height: 1px;
+        background-color: #eaeaea;
+      }
+    </style>
+  </head>
+  <body>
+    <table role="presentation" class="page" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td align="center" class="page-cell">
+          <table role="presentation" class="column" width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td class="brand">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="brand-logo"><img src="cid:foxden-logo" width="32" height="32" alt="" /></td>
+                    <td class="brand-name">Foxden</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="card">{{> @partial-block}}</td>
+            </tr>
+
+            <tr>
+              <td class="footer">{{#> footer}}{{/footer}}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+# Project
+/node_modules
+*.tsbuildinfo
+
+# Working state a running instance writes
+/.workdir
+
+# OS
+.DS_Store
+
+# IDEs and editors
+/.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Claude
+/.claude/worktrees
+/.claude/settings.local.json
+
+# Playwright
+.playwright-mcp

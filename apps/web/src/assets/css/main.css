@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@import './colors.css';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* `enabled` never matches an <a>, so a control that may render as a link uses this instead. */
+@custom-variant interactive (&:not(:disabled, [aria-disabled='true']));
+
+/* Colours resolve to the theme variables in colors.css, so one class serves both schemes. */
+@theme {
+  --font-*: initial;
+  --font-sans: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Ubuntu Mono', ui-monospace, monospace;
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-pressed: var(--primary-pressed);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent-text);
+  --color-header: var(--fg-header);
+  --color-highlight: var(--fg-highlight);
+  --color-normal: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-divider: var(--divider);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-surface: var(--bg-surface);
+  --color-inset: var(--bg-inset);
+  --color-emphasis: var(--bg-emphasis);
+  --color-popover: var(--bg-popover);
+  --color-overlay: var(--overlay);
+  --color-primary-soft: var(--primary-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-error: var(--error-color);
+  --color-error-soft: var(--error-soft);
+  --color-error-line: var(--error-line);
+  --color-switch-rail: var(--switch-rail);
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  --animate-fade-in: fade-in 0.25s ease-out;
+  --animate-spinner-turn: spin 3s linear infinite;
+  --animate-spinner-dash: spinner-dash 1.6s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes spinner-dash {
+    0% {
+      stroke-dashoffset: 240;
+    }
+    50% {
+      stroke-dashoffset: 60;
+      transform: rotate(135deg);
+    }
+    100% {
+      stroke-dashoffset: 240;
+      transform: rotate(450deg);
+    }
+  }
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--bg);
+  }
+
+  body {
+    @apply min-h-screen font-sans antialiased;
+
+    background: var(--bg-grad);
+    background-attachment: fixed;
+    color: var(--fg);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}

@@ -1,0 +1,67 @@
+/* Colours per theme. Dark is the default; public/theme.js sets [data-theme] from the stored choice before the app loads. */
+:root,
+[data-theme='dark'] {
+  --primary: #9059ff;
+  --primary-hover: #a472ff;
+  --primary-pressed: #b78aff;
+  --primary-soft: rgba(144, 89, 255, 0.18);
+  --on-primary: #ffffff;
+  --accent-text: #b89cff;
+  --bg: #1c1b20;
+  --bg-grad:
+    radial-gradient(1000px 560px at 100% 100%, rgba(112, 28, 7, 0.22), transparent 65%),
+    linear-gradient(135deg, rgba(46, 36, 72, 0.36) 0%, rgba(46, 36, 72, 0.18) 45%, transparent 80%), #1c1b20;
+  --bg-surface: #211f25;
+  --bg-inset: rgba(255, 255, 255, 0.05);
+  --bg-emphasis: rgba(255, 255, 255, 0.09);
+  --bg-popover: #312f33;
+  --overlay: rgba(0, 0, 0, 0.4);
+  --divider: #3f3e42;
+  --border: rgba(148, 146, 151, 0.45);
+  --border-strong: #949297;
+  --fg-header: #f2f0f8;
+  --fg-highlight: rgba(242, 240, 248, 0.92);
+  --fg: rgba(231, 225, 248, 0.74);
+  --fg-muted: rgba(231, 225, 248, 0.52);
+  --success: #54ffbd;
+  --success-soft: rgba(84, 255, 189, 0.12);
+  --warning: #ffbd4f;
+  --warning-soft: rgba(255, 189, 79, 0.14);
+  --error-color: #ff848b;
+  --error-soft: rgba(255, 132, 139, 0.1);
+  --error-line: rgba(255, 132, 139, 0.45);
+  --switch-rail: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='light'] {
+  --primary: #7542e5;
+  --primary-hover: #8753f0;
+  --primary-pressed: #9a6af5;
+  --primary-soft: rgba(117, 66, 229, 0.12);
+  --on-primary: #ffffff;
+  --accent-text: #5b2fd0;
+  --bg: #f9f9fb;
+  --bg-grad:
+    radial-gradient(1000px 560px at 100% 100%, rgba(255, 219, 197, 0.4), transparent 65%),
+    linear-gradient(135deg, rgba(234, 221, 255, 0.55) 0%, rgba(234, 221, 255, 0.3) 45%, transparent 80%), #f9f9fb;
+  --bg-surface: #ffffff;
+  --bg-inset: rgba(21, 20, 26, 0.04);
+  --bg-emphasis: rgba(21, 20, 26, 0.07);
+  --bg-popover: #ffffff;
+  --overlay: rgba(21, 20, 26, 0.32);
+  --divider: rgba(21, 20, 26, 0.16);
+  --border: rgba(21, 20, 26, 0.24);
+  --border-strong: rgba(21, 20, 26, 0.34);
+  --fg-header: #15141a;
+  --fg-highlight: rgba(21, 20, 26, 0.9);
+  --fg: rgba(21, 20, 26, 0.72);
+  --fg-muted: rgba(21, 20, 26, 0.54);
+  --success: #017a40;
+  --success-soft: rgba(1, 122, 64, 0.1);
+  --warning: #a44900;
+  --warning-soft: rgba(255, 164, 54, 0.16);
+  --error-color: #d7264c;
+  --error-soft: rgba(215, 38, 76, 0.07);
+  --error-line: rgba(215, 38, 76, 0.4);
+  --switch-rail: rgba(21, 20, 26, 0.2);
+}

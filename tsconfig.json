@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "noEmit": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./libs/dto" },
+    { "path": "./libs/dto/tsconfig.node.json" },
+    { "path": "./libs/fxa-crypto" },
+    { "path": "./libs/fxa-crypto/tsconfig.node.json" }
+  ]
+}
